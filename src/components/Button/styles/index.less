@@ -1,0 +1,482 @@
+@import '../../../../node_modules/antd/lib/style/themes/default.less';
+@import './variable.less';
+
+.button-container {
+  .ant-btn {
+    display: flex;
+    align-items: center;
+    &:hover,
+    &:focus {
+      border-color: @primary-color;
+    }
+    font-size: @font-size-base;
+    padding: 8px 16px;
+    display: flex;
+    font-weight: @btn-font-weight;
+    height: @btn-padding-horizontal-lg;
+  }
+  .ant-btn-lg {
+    height: @btn-height-lg !important;
+    padding: 16px 40px;
+  }
+  .ant-btn-sm {
+    height: @btn-height-sm !important;
+    padding: 4px 8px;
+  }
+  .ant-btn-primary {
+    box-shadow: none;
+    border: none;
+  }
+  .ant-btn-ghost {
+    box-shadow: none;
+    border: none;
+  }
+  .ant-btn-link {
+    box-shadow: none;
+    border: none;
+  }
+  .ant-btn-default {
+    box-shadow: none;
+    border: solid 1px;
+  }
+  svg {
+    fill: currentColor;
+  }
+  img {
+    margin: 0 8px !important;
+  }
+}
+
+.icon-left {
+  .ant-btn {
+    padding: 8px 24px 8px 16px;
+    direction: ltr;
+    display: flex;
+    align-items: center;
+    svg {
+      margin-right: 8px;
+    }
+  }
+  .ant-btn-lg {
+    padding: 16px 32px 16px 40px;
+  }
+  .ant-btn-sm {
+    padding: 4px 4px 4px 8px;
+  }
+}
+.icon-right {
+  .ant-btn {
+    padding: 8px 16px 8px 24px;
+    direction: rtl;
+    display: flex;
+    align-items: center;
+    svg {
+      margin-left: 8px;
+    }
+  }
+  .ant-btn-lg {
+    padding: 16px 40px 16px 32px;
+  }
+  .ant-btn-sm {
+    padding: 4px 8px 4px 4px;
+  }
+}
+.button-primary-primary {
+  .ant-btn-primary {
+    background-color: @primary-color;
+  }
+  .ant-btn-primary:hover {
+    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.18);
+    background-color: @primary-color !important;
+  }
+  .ant-btn-primary:focus {
+    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.18);
+    background-color: @p-700;
+  }
+}
+.button-primary-secondary {
+  .ant-btn-primary {
+    background-color: @secondary-color;
+  }
+  .ant-btn-primary:hover {
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.16);
+    background-color: @secondary-color;
+  }
+  .ant-btn-primary:focus {
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.16);
+    background-color: @s-700;
+  }
+}
+.button-primary-warning {
+  .ant-btn-primary {
+    background-color: @warning-color;
+  }
+  .ant-btn-primary:hover {
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.16);
+    background-color: @warning-color;
+  }
+  .ant-btn-primary:focus {
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.16);
+    background-color: @w-700;
+  }
+}
+.button-primary-danger {
+  .ant-btn-primary {
+    background-color: @error-color;
+  }
+  .ant-btn-primary:hover {
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.16);
+    background-color: @error-color;
+  }
+  .ant-btn-primary:focus {
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.16);
+    background-color: @d-700;
+  }
+}
+.button-secondary-grey {
+  .ant-btn-ghost {
+    background-color: @background-color;
+    color: @black;
+    svg {
+      color: @primary-color;
+    }
+  }
+  .ant-btn-ghost:hover {
+    background-color: @b-100;
+    color: @black;
+  }
+}
+.button-secondary-primary {
+  .ant-btn-ghost {
+    background-color: @p-50;
+    color: @black;
+  }
+  .ant-btn-ghost:hover {
+    background-color: @p-75;
+    color: @black;
+  }
+  .ant-btn-ghost:focus {
+    color: @p-700;
+    background-color: @p-75;
+  }
+}
+.button-secondary-secondary {
+  .ant-btn-ghost {
+    background-color: @secondary-50;
+    color: @black;
+  }
+  .ant-btn-ghost:hover {
+    background-color: @s-75;
+    color: @secondary-color;
+  }
+  .ant-btn-ghost:focus {
+    color: @s-700;
+    background-color: @s-75;
+  }
+}
+.button-secondary-warning {
+  .ant-btn-ghost {
+    background-color: @w-50;
+    color: @black;
+    svg {
+      color: @warning-color;
+    }
+  }
+  .ant-btn-ghost:hover {
+    background-color: @w-75;
+    color: @warning-color;
+  }
+  .ant-btn-ghost:focus {
+    color: @w-700;
+    background-color: @w-75;
+  }
+}
+.button-secondary-danger {
+  .ant-btn-ghost {
+    background-color: @d-50;
+    color: @black;
+    svg {
+      color: @error-color;
+    }
+  }
+  .ant-btn-ghost:hover {
+    background-color: @d-75;
+    color: @error-color;
+  }
+  .ant-btn-ghost:focus {
+    color: @d-700;
+    background-color: @d-75;
+  }
+}
+.button-secondary-success {
+  .ant-btn-ghost {
+    background-color: @p-50;
+    color: @black;
+    svg {
+      color: @primary-color;
+    }
+  }
+  .ant-btn-ghost:hover {
+    background-color: @p-75;
+    color: @primary-color;
+  }
+  .ant-btn-ghost:focus {
+    color: @p-700;
+    background-color: @p-75;
+  }
+}
+.button-linear-primary {
+  .ant-btn-default {
+    border-color: @p-100;
+  }
+  .ant-btn-default:hover {
+    border-color: @primary-color;
+    color: @primary-color;
+  }
+  .ant-btn-default:focus {
+    color: @p-700;
+    border-color: @p-700;
+  }
+}
+.button-linear-success {
+  .ant-btn-default {
+    border-color: @p-100;
+    svg {
+      color: @primary-color;
+    }
+  }
+  .ant-btn-default:hover {
+    border-color: @primary-color;
+    color: @primary-color;
+  }
+  .ant-btn-default:focus {
+    color: @p-700;
+    border-color: @p-700;
+  }
+}
+.button-linear-secondary {
+  .ant-btn-default {
+    border-color: @secondary-color;
+  }
+  .ant-btn-default:hover {
+    border-color: @secondary-color;
+    color: @secondary-color;
+  }
+  .ant-btn-default:focus {
+    color: @s-700;
+    border-color: @s-700;
+  }
+}
+.button-linear-danger {
+  .ant-btn-default {
+    border-color: @error-color;
+    svg {
+      color: @error-color;
+    }
+  }
+  .ant-btn-default:hover {
+    border-color: @error-color;
+    color: @error-color;
+  }
+  .ant-btn-default:focus {
+    color: @d-700;
+    border-color: @d-700;
+  }
+}
+.button-linear-warning {
+  .ant-btn-default {
+    border-color: @warning-color;
+    svg {
+      color: @warning-color;
+    }
+  }
+  .ant-btn-default:hover {
+    border-color: @warning-color;
+    color: @warning-color;
+  }
+  .ant-btn-default:focus {
+    color: @w-700;
+    border-color: @w-700;
+  }
+}
+.button-linear-disabled {
+  .ant-btn[disabled] {
+    background-color: @white;
+  }
+}
+.button-dashed-primary {
+  .ant-btn-dashed {
+    border-color: @primary-color;
+  }
+  .ant-btn-dashed:hover {
+    border-color: @primary-color;
+    color: @primary-color;
+    background-color: none;
+  }
+  .ant-btn-dashed:focus {
+    color: @p-700;
+    border-color: @primary-color;
+    background-color: none;
+  }
+}
+.button-dashed-success {
+  .ant-btn-dashed {
+    border-color: @p-100;
+    svg {
+      color: @primary-color;
+    }
+  }
+  .ant-btn-dashed:hover {
+    border-color: @primary-color;
+    color: @primary-color;
+    background-color: @p-50;
+  }
+  .ant-btn-dashed:focus {
+    color: @p-700;
+    border-color: @p-700;
+    background-color: @p-50;
+  }
+}
+.button-dashed-secondary {
+  .ant-btn-dashed {
+    border-color: @secondary-color;
+    svg {
+      color: @secondary-color;
+    }
+  }
+  .ant-btn-dashed:hover {
+    border-color: @secondary-color;
+    color: @secondary-color;
+    background-color: @secondary-50;
+  }
+  .ant-btn-dashed:focus {
+    color: @s-700;
+    border-color: @s-700;
+    background-color: @secondary-50;
+  }
+}
+.button-dashed-danger {
+  .ant-btn-dashed {
+    border-color: @error-color;
+    svg {
+      color: @error-color;
+    }
+  }
+  .ant-btn-dashed:hover {
+    border-color: @error-color;
+    color: @error-color;
+    background-color: @d-50;
+  }
+  .ant-btn-dashed:focus {
+    color: @d-700;
+    border-color: @d-700;
+    background-color: @d-50;
+  }
+}
+.button-dashed-warning {
+  .ant-btn-dashed {
+    border-color: @warning-color;
+    svg {
+      color: @warning-color;
+    }
+  }
+  .ant-btn-dashed:hover {
+    border-color: @warning-color;
+    color: @warning-color;
+    background-color: @w-50;
+  }
+  .ant-btn-dashed:focus {
+    color: @w-700;
+    border-color: @w-700;
+    background-color: @w-50;
+  }
+}
+.button-dashed-disabled {
+  .ant-btn-dashed[disabled] {
+    background-color: @white;
+    border-color: @b-100;
+  }
+}
+.button-flat-primary {
+  .ant-btn-link {
+    color: @black;
+    svg {
+      color: inherit;
+    }
+    &:hover {
+      background-color: transparent !important;
+    }
+  }
+  .ant-btn-link:hover {
+    color: @primary-color;
+    background-color: @p-50;
+  }
+  .ant-btn-link:focus {
+    color: @p-700;
+    background-color: @p-50;
+  }
+}
+.button-flat-success {
+  .ant-btn-link {
+    color: @primary-color;
+    svg {
+      color: inherit;
+    }
+  }
+  .ant-btn-link:hover {
+    color: @primary-color;
+    background-color: @p-50;
+  }
+  .ant-btn-link:focus {
+    color: @p-700;
+    background-color: @p-50;
+  }
+}
+.button-flat-secondary {
+  .ant-btn-link {
+    color: @secondary-color;
+  }
+  .ant-btn-link:hover {
+    color: @secondary-color;
+    background-color: @secondary-50;
+  }
+  .ant-btn-link:focus {
+    color: @s-700;
+    background-color: @secondary-50;
+  }
+}
+.button-flat-danger {
+  .ant-btn-link {
+    color: @error-color;
+  }
+  .ant-btn-link:hover {
+    color: @error-color;
+    background-color: @d-50;
+  }
+  .ant-btn-link:focus {
+    color: @d-700;
+    background-color: @d-50;
+  }
+}
+.button-flat-warning {
+  .ant-btn-link {
+    color: @warning-color;
+  }
+  .ant-btn-link:hover {
+    color: @warning-color;
+    background-color: @w-50;
+  }
+  .ant-btn-link:focus {
+    color: @w-700;
+    background-color: @w-50;
+  }
+}
+.button-flat-disabled {
+  .ant-btn-link[disabled] {
+    background-color: @white;
+    color: @b-100;
+  }
+}
+.ant-btn-primary[disabled] {
+  background-color: @white!important;
+}
